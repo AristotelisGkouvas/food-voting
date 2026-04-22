@@ -1,0 +1,4418 @@
+{
+  "people": [
+    "ΝΙΚΟΛΑΣ",
+    "ΑΡΗΣ",
+    "ΜΑΡΙΟΣ",
+    "ΑΓΓΕΛΟΣ",
+    "ΠΑΥΛΟΣ",
+    "ΑΛΕΚΟΣ",
+    "ΚΩΣΤΑΣ",
+    "ΛΕΥΤΕΡΗΣ"
+  ],
+  "shops": [
+    {
+      "id": "gyroland",
+      "name": "GYROLAND",
+      "products": [
+        {
+          "id": "gyro_pita_pork",
+          "name": "Πίτα με γύρο χοιρινό",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_chicken",
+          "name": "Πίτα με γύρο κοτόπουλο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_mix",
+          "name": "Πίτα με γύρο ανάμεικτο (χοιρινό & κοτόπουλο)",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_souvlaki_pork",
+          "name": "Πίτα με σουβλάκι χοιρινό",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_souvlaki_chicken",
+          "name": "Πίτα με σουβλάκι κοτόπουλο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_kebab",
+          "name": "Πίτα με κεμπάπ πολίτικο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_kotobacon",
+          "name": "Πίτα με κοτομπέικον",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_sausage",
+          "name": "Πίτα με λουκάνικο χωριάτικο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_beef",
+          "name": "Πίτα με μπιφτέκι μοσχαρίσιο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_veggie",
+          "name": "Πίτα με ψητά λαχανικά (νηστίσιμη)",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_pita_giant",
+          "name": "Πίτα γίγας",
+          "groups": [
+            {
+              "id": "meat",
+              "name": "Κρέας",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "gyros_pork",
+                  "name": "Γύρος χοιρινός"
+                },
+                {
+                  "id": "gyros_chicken",
+                  "name": "Γύρος κοτόπουλο"
+                },
+                {
+                  "id": "souvlaki_pork",
+                  "name": "Σουβλάκι χοιρινό"
+                },
+                {
+                  "id": "souvlaki_chicken",
+                  "name": "Σουβλάκι κοτόπουλο"
+                },
+                {
+                  "id": "kebab",
+                  "name": "Κεμπάπ"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_merida_pork",
+          "name": "Μερίδα γύρος χοιρινός",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                },
+                {
+                  "id": "salad",
+                  "name": "Σαλάτα"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως (ατομικό)",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_merida_chicken",
+          "name": "Μερίδα γύρος κοτόπουλο",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                },
+                {
+                  "id": "salad",
+                  "name": "Σαλάτα"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως (ατομικό)",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_merida_souvlaki_pork",
+          "name": "Μερίδα σουβλάκι χοιρινό",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                },
+                {
+                  "id": "salad",
+                  "name": "Σαλάτα"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως (ατομικό)",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_merida_kebab",
+          "name": "Μερίδα κεμπάπ γιαουρτλού",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_merida_kotobouk",
+          "name": "Μερίδα κοτομπουκιές",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα μέλι"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "bbq",
+                  "name": "BBQ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_fries",
+          "name": "Πατάτες τηγανητές",
+          "groups": [
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "oregano",
+                  "name": "Ρίγανη"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gyro_salad_village",
+          "name": "Χωριάτικη σαλάτα",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "olives",
+                  "name": "Ελιές"
+                },
+                {
+                  "id": "peppers",
+                  "name": "Πιπεριά"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "phone": "2651 092900"
+    },
+    {
+      "id": "apiko",
+      "name": "APIKO",
+      "products": [
+        {
+          "id": "apiko_pita_pork",
+          "name": "Πίτα με γύρο χοιρινό",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_chicken",
+          "name": "Πίτα με γύρο κοτόπουλο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_souvlaki_pork",
+          "name": "Πίτα με σουβλάκι χοιρινό",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_souvlaki_chicken",
+          "name": "Πίτα με σουβλάκι κοτόπουλο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_kebab",
+          "name": "Πίτα με κεμπάπ",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_beef",
+          "name": "Πίτα με μπιφτέκι",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_sausage",
+          "name": "Πίτα με λουκάνικο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_pita_veggie",
+          "name": "Πίτα με ψητά λαχανικά (νηστίσιμη)",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_gyros_pork",
+          "name": "Γύρος χοιρινός σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_gyros_chicken",
+          "name": "Γύρος κοτόπουλο σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_souvlaki_pork",
+          "name": "Σουβλάκι χοιρινό σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_souvlaki_chicken",
+          "name": "Σουβλάκι κοτόπουλο σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_bifteki",
+          "name": "Μπιφτέκι σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_sausage_village",
+          "name": "Λουκάνικο χωριάτικο σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_potatopita",
+          "name": "Πατατόπιτα σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_panseta",
+          "name": "Πανσέτα σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_stuffed_bifteki",
+          "name": "Μπιφτέκι γεμιστό σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_chicken_fillet",
+          "name": "Φιλέτο κοτόπουλο σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_kebab",
+          "name": "Κεμπάπ σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_sand_sausage",
+          "name": "Λουκάνικο σε σάντουιτς",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "cocktail",
+                  "name": "Κοκτέιλ"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_piece_souvlaki_pork",
+          "name": "Σουβλάκι χοιρινό (τμχ) — με ψωμί",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_piece_souvlaki_chicken",
+          "name": "Σουβλάκι κοτόπουλο (τμχ) — με ψωμί",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_piece_sausage_village",
+          "name": "Λουκάνικο χωριάτικο (τμχ) — με ψωμί",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_piece_kotobacon",
+          "name": "Κοτομπέικον (τμχ) — με ψωμί",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_piece_bifteki",
+          "name": "Μπιφτέκι (τμχ) — με ψωμί",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_gyros_pork",
+          "name": "Γύρος χοιρινός μερίδα",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_souvlaki_pork",
+          "name": "Σουβλάκι χοιρινό μερίδα (4 τμχ)",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_souvlaki_chicken",
+          "name": "Σουβλάκι κοτόπουλο μερίδα (4 τμχ)",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_sausage_village",
+          "name": "Λουκάνικο χωριάτικο μερίδα",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_kotobacon",
+          "name": "Κοτομπέικον μερίδα",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_kotobouk",
+          "name": "Κοτομπουκιές μερίδα (8 τμχ)",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_panseta",
+          "name": "Πανσέτα μερίδα",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_bifteki",
+          "name": "Μπιφτέκι μερίδα (2 τμχ)",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_pork_chop",
+          "name": "Μπριζόλα χοιρινή μερίδα",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_merida_chicken_grill",
+          "name": "Κοτόπουλο σχάρας (το κιλό)",
+          "groups": [
+            {
+              "id": "accompaniments",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες τηγανητές"
+                },
+                {
+                  "id": "zymaraki",
+                  "name": "Ζυμαράκι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_hamburger",
+          "name": "Hamburger",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "lettuce",
+                  "name": "Μαρούλι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_cheeseburger",
+          "name": "Cheeseburger",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "lettuce",
+                  "name": "Μαρούλι"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "egg",
+                  "name": "Αυγό"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_club_classic",
+          "name": "Club sandwich κλασικό (ζαμπόν, μπέικον, gouda, ντομάτα, μαρούλι, μαγιονέζα)",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "lettuce",
+                  "name": "Μαρούλι"
+                },
+                {
+                  "id": "bacon",
+                  "name": "Μπέικον"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_baguette_apico",
+          "name": "Μπαγκέτα Apico (ζαμπόν, gouda, ντομάτα, μαγιονέζα, μαρούλι)",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "lettuce",
+                  "name": "Μαρούλι"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_baguette_turkey",
+          "name": "Μπαγκέτα γαλοπούλα (γαλοπούλα, gouda, μαγιονέζα, ντομάτα, μαρούλι)",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "lettuce",
+                  "name": "Μαρούλι"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_baguette_chicken",
+          "name": "Μπαγκέτα κοτόπουλο (κοτόπουλο, gouda, μαγιονέζα, μαρούλι)",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "lettuce",
+                  "name": "Μαρούλι"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_baguette_village",
+          "name": "Μπαγκέτα χωριάτικη (φέτα, ελιές, αγγούρι, ντομάτα)",
+          "groups": [
+            {
+              "id": "without",
+              "name": "Χωρίς",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "cucumber",
+                  "name": "Αγγούρι"
+                },
+                {
+                  "id": "olives",
+                  "name": "Ελιές"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "apiko_my_sandwich",
+          "name": "My sandwich — φτιάξε το δικό σου"
+        },
+        {
+          "id": "apiko_my_crepa",
+          "name": "My crepa — γλυκιά κρέπα"
+        },
+        {
+          "id": "apiko_offer_7pies_free",
+          "name": "Προσφορά: 7 πίτες + 1 δώρο"
+        },
+        {
+          "id": "apiko_offer_7pies_drink",
+          "name": "Προσφορά: 7 πίτες + 1 αναψυκτικό 1.5lt"
+        },
+        {
+          "id": "apiko_coca_cola_330",
+          "name": "Coca-Cola 330ml"
+        },
+        {
+          "id": "apiko_coca_cola_light_330",
+          "name": "Coca-Cola light 330ml"
+        },
+        {
+          "id": "apiko_coca_cola_zero_330",
+          "name": "Coca-Cola zero 330ml"
+        },
+        {
+          "id": "apiko_fanta_orange_330",
+          "name": "Fanta πορτοκαλάδα 330ml"
+        },
+        {
+          "id": "apiko_fanta_lemon_330",
+          "name": "Fanta λεμονάδα 330ml"
+        },
+        {
+          "id": "apiko_fanta_blue_330",
+          "name": "Fanta πορτοκαλάδα μπλε 330ml"
+        },
+        {
+          "id": "apiko_sprite_330",
+          "name": "Sprite 330ml"
+        },
+        {
+          "id": "apiko_soda_330",
+          "name": "Σόδα 330ml"
+        },
+        {
+          "id": "apiko_coca_cola_500",
+          "name": "Coca-Cola 500ml"
+        },
+        {
+          "id": "apiko_ice_tea_lemon_330",
+          "name": "Ice tea λεμόνι 330ml"
+        }
+      ],
+      "phone": "2651 094724"
+    },
+    {
+      "id": "metaxy_mas",
+      "name": "ΜΕΤΑΞΥ ΜΑΣ",
+      "products": [
+        {
+          "id": "mm_psomaki_panseta",
+          "name": "Ψωμάκι με πανσέτα",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_psomaki_souvlaki_pork",
+          "name": "Ψωμάκι με σουβλάκι χοιρινό",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_psomaki_sausage",
+          "name": "Ψωμάκι με λουκάνικο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                },
+                {
+                  "id": "spicy",
+                  "name": "Καυτερή"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            },
+            {
+              "id": "without",
+              "name": "Με",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion",
+                  "name": "Κρεμμύδι"
+                },
+                {
+                  "id": "tomato",
+                  "name": "Ντομάτα"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_souvlaki_pork_piece",
+          "name": "Σουβλάκι χοιρινό (τμχ) — συνοδεύεται με πατάτες",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_souvlaki_chicken_piece",
+          "name": "Σουβλάκι κοτόπουλο (τμχ) — συνοδεύεται με πατάτες",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_sausage_piece",
+          "name": "Λουκάνικο (τμχ) — συνοδεύεται με πατάτες",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_merida_souvlaki",
+          "name": "Μερίδα σουβλάκι",
+          "groups": [
+            {
+              "id": "meat",
+              "name": "Κρέας",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "pork",
+                  "name": "Χοιρινό"
+                },
+                {
+                  "id": "chicken",
+                  "name": "Κοτόπουλο"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως (ατομικό)",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_merida_panseta",
+          "name": "Μερίδα πανσέτα",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως (ατομικό)",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "tzatziki",
+                  "name": "Τζατζίκι"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_merida_sausage",
+          "name": "Μερίδα λουκάνικο",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως (ατομικό)",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_freddo",
+          "name": "Freddo",
+          "groups": [
+            {
+              "id": "type",
+              "name": "Είδος",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "espresso",
+                  "name": "Espresso"
+                },
+                {
+                  "id": "cappuccino",
+                  "name": "Cappuccino"
+                }
+              ]
+            },
+            {
+              "id": "sweetness",
+              "name": "Γλυκύτητα",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "plain",
+                  "name": "Σκέτος"
+                },
+                {
+                  "id": "medium",
+                  "name": "Μέτριος"
+                },
+                {
+                  "id": "sweet",
+                  "name": "Γλυκός"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_cappuccino",
+          "name": "Cappuccino",
+          "groups": [
+            {
+              "id": "size",
+              "name": "Μέγεθος",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "single",
+                  "name": "Απλό"
+                },
+                {
+                  "id": "double",
+                  "name": "Διπλό"
+                }
+              ]
+            },
+            {
+              "id": "sweetness",
+              "name": "Γλυκύτητα",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "plain",
+                  "name": "Σκέτος"
+                },
+                {
+                  "id": "medium",
+                  "name": "Μέτριος"
+                },
+                {
+                  "id": "sweet",
+                  "name": "Γλυκός"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_espresso",
+          "name": "Espresso",
+          "groups": [
+            {
+              "id": "sweetness",
+              "name": "Γλυκύτητα",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "plain",
+                  "name": "Σκέτος"
+                },
+                {
+                  "id": "medium",
+                  "name": "Μέτριος"
+                },
+                {
+                  "id": "sweet",
+                  "name": "Γλυκός"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_greek_coffee",
+          "name": "Ελληνικός καφές",
+          "groups": [
+            {
+              "id": "sweetness",
+              "name": "Γλυκύτητα",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "plain",
+                  "name": "Σκέτος"
+                },
+                {
+                  "id": "medium",
+                  "name": "Μέτριος"
+                },
+                {
+                  "id": "sweet",
+                  "name": "Γλυκός"
+                },
+                {
+                  "id": "varyglykos",
+                  "name": "Βαρύγλυκος"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_nescafe_frape",
+          "name": "Νες καφές / Φραπέ",
+          "groups": [
+            {
+              "id": "type",
+              "name": "Είδος",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "nes_hot",
+                  "name": "Νες ζεστός"
+                },
+                {
+                  "id": "frape",
+                  "name": "Φραπέ"
+                }
+              ]
+            },
+            {
+              "id": "sweetness",
+              "name": "Γλυκύτητα",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "plain",
+                  "name": "Σκέτος"
+                },
+                {
+                  "id": "medium",
+                  "name": "Μέτριος"
+                },
+                {
+                  "id": "sweet",
+                  "name": "Γλυκός"
+                }
+              ]
+            },
+            {
+              "id": "milk",
+              "name": "Γάλα",
+              "type": "single",
+              "options": [
+                {
+                  "id": "with",
+                  "name": "Με γάλα"
+                },
+                {
+                  "id": "without",
+                  "name": "Χωρίς γάλα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_chocolate",
+          "name": "Σοκολάτα ρόφημα",
+          "groups": [
+            {
+              "id": "temp",
+              "name": "Θερμοκρασία",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "hot",
+                  "name": "Ζεστή"
+                },
+                {
+                  "id": "cold",
+                  "name": "Κρύα"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_tea",
+          "name": "Τσάι",
+          "groups": [
+            {
+              "id": "type",
+              "name": "Είδος",
+              "type": "single",
+              "options": [
+                {
+                  "id": "black",
+                  "name": "Μαύρο"
+                },
+                {
+                  "id": "green",
+                  "name": "Πράσινο"
+                },
+                {
+                  "id": "chamomile",
+                  "name": "Χαμομήλι"
+                },
+                {
+                  "id": "lemon",
+                  "name": "Λεμόνι"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "mm_water",
+          "name": "Νερό"
+        },
+        {
+          "id": "mm_coca_cola",
+          "name": "Coca Cola"
+        },
+        {
+          "id": "mm_orange",
+          "name": "Πορτοκαλάδα"
+        },
+        {
+          "id": "mm_lemon",
+          "name": "Λεμονάδα"
+        },
+        {
+          "id": "mm_sprite",
+          "name": "Sprite"
+        },
+        {
+          "id": "mm_soda",
+          "name": "Σόδα"
+        },
+        {
+          "id": "mm_amstel",
+          "name": "Μπύρα Amstel 330ml"
+        },
+        {
+          "id": "mm_alfa",
+          "name": "Μπύρα Άλφα 330ml"
+        }
+      ],
+      "phone": "2651 094130"
+    },
+    {
+      "id": "ikea",
+      "name": "ΙΚΕΑ",
+      "products": [
+        {
+          "id": "ikea_meatballs",
+          "name": "Σουηδικοί κεφτέδες",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "mash",
+                  "name": "Πουρές"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                },
+                {
+                  "id": "veg",
+                  "name": "Λαχανικά"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "single",
+              "options": [
+                {
+                  "id": "cream",
+                  "name": "Κρέμα"
+                },
+                {
+                  "id": "lingon",
+                  "name": "Lingonberry"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_plant_balls",
+          "name": "Plant balls (κεφτεδάκια λαχανικών)",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "mash",
+                  "name": "Πουρές"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                },
+                {
+                  "id": "veg",
+                  "name": "Λαχανικά"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_salmon",
+          "name": "Σολομός ψητός",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "mash",
+                  "name": "Πουρές"
+                },
+                {
+                  "id": "veg",
+                  "name": "Λαχανικά"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                }
+              ]
+            },
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "single",
+              "options": [
+                {
+                  "id": "hollandaise",
+                  "name": "Ολλανδική"
+                },
+                {
+                  "id": "lemon",
+                  "name": "Λεμόνι"
+                },
+                {
+                  "id": "no_sauce",
+                  "name": "Χωρίς σως"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_chicken",
+          "name": "Κοτόπουλο φιλέτο",
+          "groups": [
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "mash",
+                  "name": "Πουρές"
+                },
+                {
+                  "id": "rice",
+                  "name": "Ρύζι"
+                },
+                {
+                  "id": "veg",
+                  "name": "Λαχανικά"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_hotdog",
+          "name": "Hot Dog κλασικό",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion_crisp",
+                  "name": "Κρεμμύδι crispy"
+                },
+                {
+                  "id": "pickles",
+                  "name": "Πίκλες"
+                },
+                {
+                  "id": "cheese",
+                  "name": "Τυρί"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_hotdog_veg",
+          "name": "Veggie Hot Dog",
+          "groups": [
+            {
+              "id": "sauce",
+              "name": "Σως",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "ketchup",
+                  "name": "Κέτσαπ"
+                },
+                {
+                  "id": "mustard",
+                  "name": "Μουστάρδα"
+                },
+                {
+                  "id": "yellow",
+                  "name": "Κίτρινη σως"
+                },
+                {
+                  "id": "mayo",
+                  "name": "Μαγιονέζα (vegan)"
+                }
+              ]
+            },
+            {
+              "id": "extras",
+              "name": "Έξτρα",
+              "type": "multi",
+              "options": [
+                {
+                  "id": "onion_crisp",
+                  "name": "Κρεμμύδι crispy"
+                },
+                {
+                  "id": "pickles",
+                  "name": "Πίκλες"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_kids",
+          "name": "Παιδικό γεύμα",
+          "groups": [
+            {
+              "id": "protein",
+              "name": "Κυρίως",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "meatballs",
+                  "name": "Κεφτεδάκια"
+                },
+                {
+                  "id": "plant_balls",
+                  "name": "Plant balls"
+                },
+                {
+                  "id": "chicken",
+                  "name": "Κοτόπουλο"
+                },
+                {
+                  "id": "pasta",
+                  "name": "Ζυμαρικά"
+                }
+              ]
+            },
+            {
+              "id": "side",
+              "name": "Συνοδευτικό",
+              "type": "single",
+              "required": true,
+              "options": [
+                {
+                  "id": "mash",
+                  "name": "Πουρές"
+                },
+                {
+                  "id": "fries",
+                  "name": "Πατάτες"
+                },
+                {
+                  "id": "veg",
+                  "name": "Λαχανικά"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ikea_caesar",
+          "name": "Σαλάτα Καίσαρα"
+        },
+        {
+          "id": "ikea_cake_chocolate",
+          "name": "Σοκολατένιο κέικ (Chokladboll)"
+        },
+        {
+          "id": "ikea_cinnamon",
+          "name": "Κανελόψωμο (Kanelbullar)"
+        }
+      ],
+      "phone": "2651 079000"
+    },
+    {
+      "id": "other",
+      "name": "ΑΛΛΟ",
+      "freeform": true,
+      "products": [],
+      "phone": ""
+    }
+  ]
+}

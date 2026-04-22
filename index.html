@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Voting</title>
+<style>
+  :root {
+    --bg: #242424;
+    --bg-alt: #2c2c2c;
+    --card: #2f2f2f;
+    --card-hover: #363636;
+    --text: #f5f5f5;
+    --text-soft: #e5e5e5;
+    --muted: #a1a1aa;
+    --muted-light: #71717a;
+    --border: #3f3f3f;
+    --border-strong: #525252;
+    --primary: #f97316;
+    --primary-hover: #ea580c;
+    --primary-light: rgba(249,115,22,.14);
+    --primary-soft: rgba(249,115,22,.28);
+    --accent: #22c55e;
+    --danger: #ef4444;
+    --danger-light: rgba(239,68,68,.18);
+    --warm: #fbbf24;
+    --warm-light: rgba(251,191,36,.22);
+    --chip-bg: #3a3a3a;
+    --chip-hover: #454545;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 8px rgba(0,0,0,.3), 0 2px 4px rgba(0,0,0,.2);
+    --shadow-lg: 0 12px 28px rgba(0,0,0,.4), 0 8px 12px rgba(0,0,0,.25);
+    --radius: 14px;
+    --radius-sm: 10px;
+    --radius-lg: 20px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0 0 60px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+  /* Hero header */
+  .hero {
+    background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%);
+    color: white;
+    padding: 28px 16px 40px;
+    margin-bottom: -20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,.12) 0, transparent 50%),
+                      radial-gradient(circle at 80% 70%, rgba(255,255,255,.08) 0, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .container { position: relative; }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 14px;
+  }
+  h1 {
+    font-size: 28px; margin: 0; font-weight: 800; letter-spacing: -.5px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .session-info {
+    color: rgba(255,255,255,.85); font-size: 13px; margin-top: 6px; font-weight: 500;
+  }
+  .user-pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,.18); backdrop-filter: blur(8px);
+    color: white; padding: 9px 16px; border-radius: 999px;
+    font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,.2);
+  }
+  .user-pill button {
+    background: rgba(255,255,255,.25); color: white; border: none;
+    font-size: 11px; padding: 4px 10px; cursor: pointer;
+    border-radius: 999px; text-transform: uppercase; letter-spacing: .5px;
+    font-weight: 600; transition: background .2s;
+  }
+  .user-pill button:hover { background: rgba(255,255,255,.4); }
+
+  .main { margin-top: 20px; }
+
+  .card {
+    background: var(--card); border-radius: var(--radius); padding: 22px;
+    border: 1px solid var(--border); margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow .2s;
+  }
+  .card:hover { box-shadow: var(--shadow-md); }
+  h2 { font-size: 17px; margin: 0 0 16px; font-weight: 700; letter-spacing: -.2px; }
+  h3 {
+    font-size: 12px; margin: 0 0 10px; font-weight: 700; color: var(--muted);
+    text-transform: uppercase; letter-spacing: .8px;
+  }
+
+  /* Chip / pill buttons */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: var(--chip-bg); color: var(--text);
+    border: 2px solid transparent; padding: 11px 18px;
+    border-radius: var(--radius-sm); font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: all .18s cubic-bezier(.4,0,.2,1);
+    font-family: inherit; text-align: left; position: relative;
+  }
+  .chip:hover { background: var(--chip-hover); transform: translateY(-1px); }
+  .chip.active {
+    background: linear-gradient(135deg, var(--primary), #f97316);
+    color: white; border-color: transparent;
+    box-shadow: 0 4px 10px rgba(234,88,12,.3);
+    transform: translateY(-1px);
+  }
+  .chip.big {
+    min-width: 150px; padding: 16px 20px; font-size: 15px;
+    text-align: center; letter-spacing: -.2px;
+  }
+  .chip.locked {
+    opacity: .35; cursor: not-allowed; pointer-events: none;
+    filter: grayscale(.5);
+  }
+  .lock-banner {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, #fef3c7, #fed7aa);
+    color: #92400e; padding: 8px 14px; border-radius: 999px;
+    font-size: 13px; font-weight: 700; margin-left: 12px;
+    border: 1px solid #fcd34d;
+  }
+
+  /* Option chips (checkbox/radio style) */
+  .option {
+    background: var(--bg-alt); color: var(--text-soft);
+    border: 1.5px solid var(--border); padding: 9px 16px;
+    border-radius: 999px; font-size: 14px; cursor: pointer;
+    transition: all .18s cubic-bezier(.4,0,.2,1); font-family: inherit;
+    user-select: none; font-weight: 500;
+  }
+  .option:hover { border-color: var(--primary); background: var(--primary-light); color: var(--text); }
+  .option.active {
+    background: var(--primary); color: white; border-color: var(--primary);
+    box-shadow: 0 2px 8px rgba(249,115,22,.4);
+  }
+
+  .section { margin-bottom: 16px; }
+  .section:last-child { margin-bottom: 0; }
+  .divider { height: 1px; background: var(--border); margin: 16px 0; }
+
+  input[type="text"], input[type="number"], textarea {
+    padding: 11px 14px; border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+    font-size: 14px; font-family: inherit; background: var(--bg-alt); color: var(--text);
+    width: 100%; transition: border-color .15s, box-shadow .15s;
+  }
+  input[type="text"]::placeholder, input[type="number"]::placeholder, textarea::placeholder {
+    color: var(--muted-light);
+  }
+  input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    outline: none; border-color: var(--primary); background: var(--card);
+    box-shadow: 0 0 0 4px rgba(249,115,22,.18);
+  }
+
+  button.btn {
+    padding: 12px 22px; border: none; border-radius: var(--radius-sm); font-size: 15px;
+    font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: all .18s cubic-bezier(.4,0,.2,1); letter-spacing: -.1px;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--primary), #f97316);
+    color: white; box-shadow: 0 2px 8px rgba(234,88,12,.25);
+  }
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px); box-shadow: 0 4px 14px rgba(234,88,12,.35);
+  }
+  .btn-primary:disabled {
+    background: #e5e7eb; color: var(--muted-light); cursor: not-allowed;
+    box-shadow: none;
+  }
+  .btn-danger { background: var(--danger); color: white; }
+  .btn-danger:hover { background: #b91c1c; transform: translateY(-1px); }
+  .btn-ghost {
+    background: transparent; color: var(--danger); padding: 6px 10px;
+    border-radius: var(--radius-sm); font-size: 14px; border: none; cursor: pointer;
+    transition: background .15s;
+  }
+  .btn-ghost:hover { background: var(--danger-light); }
+
+  .submit-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; margin-top: 18px; flex-wrap: wrap;
+    padding-top: 16px; border-top: 1px dashed var(--border);
+  }
+  .qty-stepper {
+    display: inline-flex; align-items: center; border: 1.5px solid var(--border);
+    border-radius: 12px; overflow: hidden; background: var(--bg-alt);
+  }
+  .qty-stepper .qty-label {
+    padding: 0 14px; color: var(--muted); font-size: 12px;
+    font-weight: 700; text-transform: uppercase; letter-spacing: .6px;
+  }
+  .qty-stepper button {
+    background: var(--bg-alt); border: none; padding: 10px 18px; font-size: 22px;
+    font-weight: 700; cursor: pointer; color: var(--primary); line-height: 1;
+    transition: background .15s;
+  }
+  .qty-stepper button:hover:not(:disabled) { background: var(--primary-light); }
+  .qty-stepper button:disabled { opacity: .3; cursor: not-allowed; }
+  .qty-stepper .qty-val {
+    padding: 0 14px; font-weight: 800; min-width: 44px; text-align: center;
+    font-size: 18px; font-variant-numeric: tabular-nums; color: var(--text);
+  }
+  .btn-cancel { background: var(--chip-bg); color: var(--text); }
+  .btn-cancel:hover { background: var(--chip-hover); }
+  .edit-badge {
+    background: rgba(251,191,36,.18); color: #fcd34d;
+    border: 1px solid rgba(251,191,36,.35);
+    padding: 8px 14px; border-radius: var(--radius-sm);
+    font-size: 13px; font-weight: 700; margin-bottom: 14px;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+
+  .summary-shop {
+    margin-bottom: 20px; padding: 16px; background: var(--bg-alt);
+    border-radius: var(--radius-sm);
+  }
+  .summary-shop:last-child { margin-bottom: 0; }
+  .summary-shop h4 {
+    margin: 0 0 12px; font-size: 16px; color: var(--primary);
+    padding-bottom: 8px; border-bottom: 2px solid rgba(249,115,22,.3);
+    font-weight: 700; display: flex; align-items: center;
+    gap: 10px; flex-wrap: wrap;
+  }
+  .shop-phone {
+    font-size: 13px; font-weight: 600;
+    color: var(--text-soft); background: var(--bg-alt);
+    padding: 4px 12px; border-radius: 999px;
+    border: 1px solid var(--border);
+    text-decoration: none; display: inline-flex; align-items: center; gap: 4px;
+    transition: all .15s;
+  }
+  .shop-phone:hover {
+    border-color: var(--primary); color: var(--primary);
+    background: var(--primary-light);
+  }
+  .summary-total {
+    color: var(--muted); font-weight: 500; font-size: 13px;
+    margin-left: auto; font-variant-numeric: tabular-nums;
+  }
+  .summary-list { list-style: none; padding: 0; margin: 0; }
+  .summary-list li {
+    padding: 10px 0; border-bottom: 1px dashed var(--border-strong);
+    font-size: 14px; line-height: 1.5;
+  }
+  .summary-list li:last-child { border-bottom: none; }
+  .summary-list .qty {
+    color: var(--primary); font-weight: 800; font-size: 16px;
+    display: inline-block; min-width: 32px;
+  }
+  .summary-people {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin-top: 8px;
+  }
+  .summary-person {
+    display: inline-flex; align-items: center; gap: 4px;
+    background: var(--bg-alt); color: var(--text-soft);
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 3px 4px 3px 12px; font-size: 13px; font-weight: 600;
+    transition: all .15s;
+  }
+  .summary-person:hover { border-color: var(--primary); }
+  .summary-person.editing {
+    background: rgba(251,191,36,.18); color: #fcd34d;
+    border-color: rgba(251,191,36,.4);
+  }
+  .summary-person .p-name { margin-right: 2px; }
+  .summary-person .p-qty {
+    color: var(--primary); font-weight: 800; margin-right: 2px;
+    font-size: 12px; font-variant-numeric: tabular-nums;
+  }
+  .summary-person button {
+    background: transparent; border: none; width: 26px; height: 26px;
+    border-radius: 50%; cursor: pointer; font-size: 13px; padding: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--muted); transition: all .15s;
+  }
+  .summary-person button:hover { background: var(--chip-hover); color: var(--text); }
+  .summary-person .p-edit:hover { color: var(--primary); background: var(--primary-light); }
+  .summary-person .p-del:hover { color: var(--danger); background: var(--danger-light); }
+  .summary-header {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; flex-wrap: wrap; margin-bottom: 4px;
+  }
+  .summary-product {
+    font-size: 14px; font-weight: 600; color: var(--text);
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+
+  .random-row {
+    display: flex; gap: 12px; flex-wrap: wrap; margin-top: 18px;
+    padding-top: 18px; border-top: 1px dashed var(--border);
+  }
+  .random-btn {
+    flex: 1; min-width: 220px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white; border: none; padding: 16px 20px; border-radius: 12px;
+    font-size: 15px; font-weight: 700; cursor: pointer; font-family: inherit;
+    transition: all .2s cubic-bezier(.4,0,.2,1);
+    box-shadow: 0 4px 10px rgba(99,102,241,.25);
+    letter-spacing: -.1px;
+  }
+  .random-btn:hover:not(:disabled) {
+    transform: translateY(-2px); box-shadow: 0 8px 20px rgba(99,102,241,.4);
+  }
+  .random-btn:disabled {
+    background: #e5e7eb; color: var(--muted-light); cursor: not-allowed;
+    transform: none; box-shadow: none;
+  }
+  .random-btn.deliver {
+    background: linear-gradient(135deg, #f59e0b, #ef4444);
+    box-shadow: 0 4px 10px rgba(239,68,68,.25);
+  }
+  .random-btn.deliver:hover:not(:disabled) {
+    box-shadow: 0 8px 20px rgba(239,68,68,.4);
+  }
+
+  .random-result {
+    margin-top: 12px; padding: 18px 20px; border-radius: 12px;
+    background: linear-gradient(135deg, rgba(99,102,241,.2), rgba(168,85,247,.25));
+    font-size: 22px; font-weight: 800; text-align: center; color: #c4b5fd;
+    animation: pop .3s ease-out;
+    border: 1px solid rgba(168,85,247,.3);
+  }
+  .random-result.rolling {
+    color: var(--muted); font-weight: 500;
+    background: var(--chip-bg); border-color: var(--border);
+  }
+  .random-result .label {
+    display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--muted); font-weight: 700; margin-bottom: 6px;
+  }
+  .random-result.deliver {
+    background: linear-gradient(135deg, rgba(245,158,11,.22), rgba(239,68,68,.22));
+    color: #fed7aa; border-color: rgba(251,146,60,.4);
+  }
+  @keyframes pop {
+    0% { transform: scale(.92); opacity: 0; }
+    70% { transform: scale(1.02); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    0% { transform: translateY(10px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+  .card { animation: fadeInUp .3s ease-out both; }
+  .card:nth-child(2) { animation-delay: .05s; }
+  .card:nth-child(3) { animation-delay: .1s; }
+
+  @media print {
+    @page { size: A4; margin: 14mm 12mm; }
+    body {
+      background: white !important; color: #000 !important;
+      padding: 0 !important; margin: 0 !important;
+      font-family: 'Helvetica Neue', 'Helvetica', Arial, sans-serif !important;
+    }
+    body * { visibility: hidden; }
+    #summaryCard, #summaryCard * { visibility: visible; }
+    #summaryCard {
+      position: absolute; left: 0; top: 0; width: 100%;
+      background: white !important; border: none !important;
+      box-shadow: none !important; padding: 0 !important; margin: 0 !important;
+      animation: none !important;
+    }
+    #summaryCard details { display: block !important; }
+    #summaryCard summary { display: none !important; }
+    #printHeader { display: block !important; }
+    .random-row, #randomCallResult, #randomDeliverResult,
+    #printBtn, #summaryCard > div:last-child,
+    .summary-person .p-edit, .summary-person .p-del { display: none !important; }
+
+    /* Print header */
+    #printHeader {
+      border-bottom: 2.5px solid #000 !important;
+      padding-bottom: 10px !important; margin-bottom: 18px !important;
+    }
+    #printHeader > div:first-child {
+      font-size: 22px !important; font-weight: 800 !important;
+      color: #000 !important; letter-spacing: -.3px !important;
+    }
+    #printHeaderDate {
+      font-size: 11px !important; color: #555 !important; margin-top: 4px !important;
+    }
+
+    /* Shop block */
+    .summary-shop {
+      background: white !important; padding: 0 !important; border: none !important;
+      margin: 0 0 22px !important; page-break-inside: avoid;
+    }
+    .summary-shop h4 {
+      font-size: 16px !important; color: #000 !important;
+      border-bottom: 1.5px solid #000 !important;
+      padding-bottom: 5px !important; margin: 0 0 10px !important;
+      font-weight: 800 !important; letter-spacing: .3px !important;
+      display: flex !important; align-items: baseline !important;
+      gap: 10px !important; flex-wrap: wrap !important;
+      text-transform: uppercase !important;
+    }
+    .shop-phone {
+      font-size: 12px !important; color: #000 !important;
+      background: transparent !important; border: none !important;
+      padding: 0 !important; font-weight: 600 !important;
+      text-decoration: none !important;
+    }
+    .summary-total {
+      font-size: 11px !important; color: #555 !important;
+      margin-left: auto !important; font-weight: 500 !important;
+    }
+
+    /* Items list */
+    .summary-list { padding: 0 !important; margin: 0 !important; list-style: none !important; }
+    .summary-list li {
+      padding: 7px 0 !important; margin: 0 !important;
+      border-bottom: 1px dotted #bbb !important;
+      font-size: 12.5px !important; page-break-inside: avoid;
+    }
+    .summary-list li:last-child { border-bottom: none !important; }
+    .summary-header { display: block !important; margin: 0 !important; }
+    .summary-product {
+      display: flex !important; align-items: baseline !important; gap: 8px !important;
+    }
+    .summary-list .qty {
+      color: #000 !important; font-weight: 800 !important;
+      font-size: 14px !important; min-width: 32px !important;
+    }
+    .summary-product > span:last-child { font-weight: 600 !important; }
+
+    /* Tags */
+    .tag {
+      background: transparent !important; color: #333 !important;
+      border: none !important; padding: 0 !important;
+      margin: 0 10px 0 0 !important; font-size: 11px !important;
+      font-weight: 400 !important;
+    }
+    .tag .g { color: #666 !important; font-weight: 600 !important; }
+    .tag + .tag::before { content: '· '; color: #888; }
+    .tag[style*="fef3c7"] {
+      background: transparent !important; color: #000 !important;
+      border: none !important; font-style: italic !important;
+    }
+
+    /* Selection line under product */
+    .summary-list li > div:nth-child(2) {
+      padding-left: 40px !important; margin: 2px 0 3px !important;
+      font-size: 11px !important; color: #555 !important;
+    }
+
+    /* People chips — inline text */
+    .summary-people {
+      display: block !important; padding-left: 40px !important;
+      margin-top: 3px !important; font-size: 11.5px !important; color: #000 !important;
+    }
+    .summary-people::before {
+      content: '→ '; color: #888 !important; margin-right: 4px;
+    }
+    .summary-person {
+      display: inline !important; background: transparent !important;
+      color: #000 !important; border: none !important; padding: 0 !important;
+      margin: 0 !important; font-size: 11.5px !important; font-weight: 500 !important;
+    }
+    .summary-person + .summary-person::before { content: ', '; color: #555; }
+    .summary-person .p-qty { color: #000 !important; font-weight: 700 !important; }
+  }
+  body.printing #summaryCard { background: white; }
+
+  .table-wrap { overflow-x: auto; border-radius: var(--radius-sm); }
+  table { width: 100%; border-collapse: collapse; }
+  th, td {
+    text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border);
+    font-size: 14px; vertical-align: top;
+  }
+  th {
+    font-weight: 700; color: var(--muted); background: var(--bg-alt);
+    font-size: 11px; text-transform: uppercase; letter-spacing: .6px;
+  }
+  tbody tr { transition: background .15s; }
+  tbody tr:hover { background: rgba(249,115,22,.08); }
+  tr:last-child td { border-bottom: none; }
+  tfoot td {
+    font-weight: 700; background: var(--bg-alt); border-top: 2px solid var(--border-strong);
+  }
+  tr[style*="fef3c7"] {
+    background: rgba(251,191,36,.12) !important;
+  }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+
+  .tag {
+    display: inline-block; background: var(--chip-bg);
+    color: var(--text-soft); font-size: 12px; padding: 3px 9px;
+    border-radius: 6px; margin: 2px 3px 2px 0; font-weight: 500;
+  }
+  .tag .g { color: var(--muted); font-weight: 600; margin-right: 4px; }
+  .tag[style*="fef3c7"] {
+    background: rgba(251,191,36,.18) !important;
+    color: #fcd34d !important;
+    border: 1px solid rgba(251,191,36,.3);
+  }
+
+  .empty {
+    text-align: center; padding: 40px 20px; color: var(--muted);
+    font-size: 14px; background: var(--bg-alt); border-radius: var(--radius-sm);
+  }
+
+  details summary {
+    cursor: pointer; padding: 6px 0; font-weight: 700; font-size: 17px;
+    list-style: none; color: var(--text);
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before {
+    content: '▸'; color: var(--primary); display: inline-block;
+    margin-right: 8px; transition: transform .2s;
+  }
+  details[open] summary::before { transform: rotate(90deg); }
+
+  .history-item {
+    padding: 12px 0; border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; flex-wrap: wrap;
+  }
+  .history-item:last-child { border-bottom: none; }
+  .history-link {
+    color: var(--primary); background: white;
+    border: 1.5px solid var(--border); padding: 7px 14px;
+    border-radius: var(--radius-sm); font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: all .15s;
+  }
+  .history-link:hover {
+    background: var(--primary-light); border-color: var(--primary);
+    transform: translateY(-1px);
+  }
+
+  .toast {
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: #0f0f0f; color: #f5f5f5; padding: 14px 22px; border-radius: 999px;
+    border: 1px solid var(--border);
+    opacity: 0; transition: opacity .25s, transform .25s;
+    pointer-events: none; font-size: 14px; font-weight: 600; z-index: 30;
+    box-shadow: var(--shadow-lg);
+  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .modal {
+    position: fixed; inset: 0; background: rgba(0,0,0,.7); display: none;
+    align-items: center; justify-content: center; padding: 16px; z-index: 20;
+    backdrop-filter: blur(6px);
+  }
+  .modal.show { display: flex; animation: fadeIn .2s ease-out; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal-content {
+    background: var(--card); color: var(--text);
+    border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px;
+    max-width: 640px; width: 100%; max-height: 85vh; overflow: auto;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp .25s cubic-bezier(.4,0,.2,1);
+  }
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .modal-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 20px;
+  }
+  .modal-header h2 { margin: 0; font-size: 20px; font-weight: 800; }
+  .modal-close {
+    background: var(--chip-bg); color: var(--muted); font-size: 18px;
+    padding: 8px 12px; border: none; cursor: pointer; border-radius: var(--radius-sm);
+    font-weight: 700; transition: all .15s;
+  }
+  .modal-close:hover { background: var(--danger-light); color: var(--danger); }
+
+  .people-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+  .people-grid .chip {
+    text-align: center; padding: 18px 12px; font-size: 15px; font-weight: 700;
+  }
+
+  .products-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .hide-sm { display: none; }
+    h1 { font-size: 22px; }
+    .hero { padding: 22px 16px 32px; }
+    .card { padding: 18px; }
+    .modal-content { padding: 22px; }
+    .chip.big { min-width: 120px; padding: 13px 16px; font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="container">
+    <header>
+      <div>
+        <h1>🍔 Food Voting</h1>
+      </div>
+      <div class="user-pill" id="userPill" style="display:none;">
+        <span id="userName"></span>
+        <button id="changeUser" type="button">αλλαγή</button>
+      </div>
+    </header>
+  </div>
+</div>
+
+<div class="container main">
+  <div class="card" id="orderCard">
+    <h2 id="formTitle">Νέα καταχώρηση</h2>
+    <div class="edit-badge" id="editBadge" style="display:none;">✏️ Επεξεργασία παραγγελίας</div>
+
+    <div class="section">
+      <h3 style="display:flex; align-items:center; flex-wrap:wrap;">
+        <span>Μαγαζί</span>
+        <span class="lock-banner" id="lockBanner" style="display:none;">🔒 Όλοι από <strong id="lockShopName"></strong></span>
+      </h3>
+      <div class="chips" id="shopsList"></div>
+    </div>
+
+    <div class="section" id="productsSection" style="display:none;">
+      <h3>Προϊόν</h3>
+      <div class="products-grid" id="productsList"></div>
+    </div>
+
+    <div class="section" id="freeformSection" style="display:none;">
+      <h3>Γράψε την παραγγελία σου</h3>
+      <textarea id="freeformText" rows="4" maxlength="500" placeholder="Περιέγραψε ελεύθερα τι θες — π.χ. «Από το ΧΥΖ: 1 σαλάτα Καίσαρα χωρίς κοτόπουλο, 1 αναψυκτικό»"
+        style="padding:10px 12px; border:1px solid var(--border); border-radius:8px; font-size:14px; font-family:inherit; width:100%; resize:vertical;"></textarea>
+    </div>
+
+    <div id="groupsSection"></div>
+
+    <div class="section" id="notesSection" style="display:none;">
+      <h3>Σχόλια (προαιρετικά)</h3>
+      <input type="text" id="notes" placeholder="π.χ. κομμένο στα 4, σε χαρτί αλουμινίου…">
+    </div>
+
+    <div class="submit-row" id="submitRow" style="display:none;">
+      <div class="qty-stepper">
+        <span class="qty-label">Ποσότητα</span>
+        <button type="button" id="qtyDec" aria-label="Λιγότερο">−</button>
+        <span class="qty-val" id="qtyVal">1</span>
+        <button type="button" id="qtyInc" aria-label="Περισσότερο">+</button>
+      </div>
+      <div style="display:flex; gap:8px; flex-wrap:wrap;">
+        <button id="cancelEditBtn" type="button" class="btn btn-cancel" style="display:none;">Ακύρωση</button>
+        <button id="submitBtn" type="button" class="btn btn-primary" disabled>Καταχώρηση</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="summaryCard">
+    <div id="printHeader" style="display:none; margin-bottom:14px; border-bottom:2px solid #000; padding-bottom:8px;">
+      <div style="font-size:20px; font-weight:700;">🍔 Food Voting</div>
+      <div id="printHeaderDate" style="font-size:13px; color:#555; margin-top:4px;"></div>
+    </div>
+    <details open>
+      <summary>📋 Σύνοψη για παραγγελία</summary>
+      <div id="summaryList" style="margin-top:12px;"></div>
+      <div class="random-row">
+        <button id="randomCallBtn" class="random-btn" type="button">📞 Τυχαίος για τηλέφωνο</button>
+        <button id="randomDeliverBtn" class="random-btn deliver" type="button">🏃 Τυχαίος για παραλαβή</button>
+      </div>
+      <div id="randomCallResult"></div>
+      <div id="randomDeliverResult"></div>
+    </details>
+    <div style="display:flex; justify-content:center; margin-top:16px;">
+      <button id="printBtn" type="button" class="btn btn-primary">🖨️ Εκτύπωση / PDF</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <details>
+      <summary>Ιστορικό</summary>
+      <div id="historyList" style="margin-top:12px;"></div>
+    </details>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- Modal επιλογής ονόματος -->
+<div class="modal" id="nameModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2>👋 Ποιος είσαι;</h2>
+      <button class="modal-close" id="nameModalClose" type="button" style="display:none;">✕</button>
+    </div>
+    <div class="people-grid" id="peopleList"></div>
+    <div id="guestRow" style="margin-top:14px; display:flex; gap:8px; align-items:center;">
+      <input type="text" id="guestInput" placeholder="ή γράψε άλλο όνομα…" maxlength="40" style="flex:1;">
+      <button class="btn btn-primary" id="guestAdd" type="button" style="padding:10px 16px;">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal ιστορικού -->
+<div class="modal" id="historyModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 id="historyModalTitle"></h2>
+      <button class="modal-close" id="historyModalClose" type="button">✕</button>
+    </div>
+    <div id="historyModalBody"></div>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmtTime = (iso) =>
+  !iso ? '' : new Date(iso).toLocaleString('el-GR', { dateStyle: 'short', timeStyle: 'short' });
+const esc = (s) =>
+  String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+const state = {
+  menu: null,
+  user: localStorage.getItem('fv:name') || null,
+  shop: null,
+  product: null,
+  selections: {},
+  freeText: '',
+  quantity: 1,
+  editingId: null,
+  orders: [],
+  session: null,
+};
+
+const QTY_MAX = 20;
+
+function toast(msg) {
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+async function api(path, opts) {
+  const r = await fetch(path, opts);
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(data.error || `HTTP ${r.status}`);
+  return data;
+}
+
+// ---------- Ονόματα ----------
+function openNameModal(allowClose) {
+  const grid = $('peopleList');
+  grid.innerHTML = state.menu.people.map(n =>
+    `<button class="chip${state.user === n ? ' active' : ''}" data-name="${esc(n)}">${esc(n)}</button>`
+  ).join('');
+  grid.querySelectorAll('[data-name]').forEach(b => {
+    b.addEventListener('click', () => selectUser(b.dataset.name));
+  });
+  $('nameModalClose').style.display = allowClose ? '' : 'none';
+  $('nameModal').classList.add('show');
+}
+function closeNameModal() { $('nameModal').classList.remove('show'); }
+function selectUser(name) {
+  name = (name || '').trim();
+  if (!name) return;
+  state.user = name;
+  localStorage.setItem('fv:name', name);
+  $('userName').textContent = name;
+  $('userPill').style.display = '';
+  closeNameModal();
+  updateSubmit();
+}
+$('nameModalClose').addEventListener('click', closeNameModal);
+$('changeUser').addEventListener('click', () => openNameModal(true));
+$('guestAdd').addEventListener('click', () => {
+  const v = $('guestInput').value;
+  if (v.trim()) { selectUser(v); $('guestInput').value = ''; }
+});
+$('guestInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') $('guestAdd').click();
+});
+
+// ---------- Μαγαζιά ----------
+function lockedShopId() {
+  // Όταν επεξεργαζόμαστε την πρώτη καταχώρηση (και είναι η μόνη ή διαφορετική από τις άλλες),
+  // η πρώτη υπόλοιπη είναι η lock reference. Αν δεν υπάρχουν άλλες → δεν υπάρχει lock.
+  const others = state.orders.filter(o => o.id !== state.editingId);
+  return others.length ? others[0].shop_id : null;
+}
+function renderShops() {
+  const locked = lockedShopId();
+  if (locked) {
+    const lockShop = state.menu.shops.find(s => s.id === locked);
+    $('lockBanner').style.display = '';
+    $('lockShopName').textContent = lockShop ? lockShop.name : locked;
+  } else {
+    $('lockBanner').style.display = 'none';
+  }
+  $('shopsList').innerHTML = state.menu.shops.map(s => {
+    const isActive = state.shop && state.shop.id === s.id;
+    const isLocked = locked && s.id !== locked;
+    const cls = 'chip big' + (isActive ? ' active' : '') + (isLocked ? ' locked' : '');
+    return `<button class="${cls}" data-shop="${esc(s.id)}"${isLocked ? ' disabled' : ''}>${esc(s.name)}</button>`;
+  }).join('');
+  $('shopsList').querySelectorAll('[data-shop]:not(.locked)').forEach(b => {
+    b.addEventListener('click', () => selectShop(b.dataset.shop));
+  });
+}
+function selectShop(id) {
+  state.shop = state.menu.shops.find(s => s.id === id);
+  state.product = null;
+  state.selections = {};
+  state.freeText = '';
+  renderShops();
+  renderProducts();
+  renderFreeform();
+  renderGroups();
+  updateSubmit();
+}
+
+function renderFreeform() {
+  const section = $('freeformSection');
+  const ta = $('freeformText');
+  if (state.shop && state.shop.freeform) {
+    section.style.display = '';
+    ta.value = state.freeText || '';
+  } else {
+    section.style.display = 'none';
+  }
+}
+$('freeformText').addEventListener('input', (e) => {
+  state.freeText = e.target.value;
+  updateSubmit();
+});
+
+// ---------- Προϊόντα ----------
+function renderProducts() {
+  if (!state.shop || state.shop.freeform) {
+    $('productsSection').style.display = 'none';
+    return;
+  }
+  $('productsSection').style.display = '';
+  $('productsList').innerHTML = state.shop.products.map(p => {
+    const active = state.product && state.product.id === p.id;
+    return `<button class="chip${active ? ' active' : ''}" data-product="${esc(p.id)}">${esc(p.name)}</button>`;
+  }).join('');
+  $('productsList').querySelectorAll('[data-product]').forEach(b => {
+    b.addEventListener('click', () => selectProduct(b.dataset.product));
+  });
+}
+function selectProduct(id) {
+  state.product = state.shop.products.find(p => p.id === id);
+  state.selections = {};
+  (state.product.groups || []).forEach(g => {
+    state.selections[g.id] = g.type === 'single' ? null : [];
+  });
+  renderProducts();
+  renderGroups();
+  renderQuantity();
+  updateSubmit();
+}
+
+function renderQuantity() {
+  $('qtyVal').textContent = state.quantity;
+  $('qtyDec').disabled = state.quantity <= 1;
+  $('qtyInc').disabled = state.quantity >= QTY_MAX;
+}
+$('qtyDec').addEventListener('click', () => {
+  if (state.quantity > 1) { state.quantity--; renderQuantity(); }
+});
+$('qtyInc').addEventListener('click', () => {
+  if (state.quantity < QTY_MAX) { state.quantity++; renderQuantity(); }
+});
+
+// ---------- Επιλογές (groups) ----------
+function renderGroups() {
+  const wrap = $('groupsSection');
+  if (state.shop && state.shop.freeform) {
+    wrap.innerHTML = '';
+    $('notesSection').style.display = '';
+    $('submitRow').style.display = '';
+    return;
+  }
+  if (!state.product) {
+    wrap.innerHTML = '';
+    $('notesSection').style.display = 'none';
+    $('submitRow').style.display = 'none';
+    return;
+  }
+  const groups = state.product.groups || [];
+  wrap.innerHTML = groups.map(g => {
+    const chosen = state.selections[g.id];
+    const opts = g.options.map(o => {
+      const isActive = g.type === 'single' ? chosen === o.id : Array.isArray(chosen) && chosen.includes(o.id);
+      return `<button class="option${isActive ? ' active' : ''}" data-g="${esc(g.id)}" data-o="${esc(o.id)}" data-t="${g.type}">${esc(o.name)}</button>`;
+    }).join('');
+    const req = g.required ? ' <span style="color:var(--danger); font-weight:700;">*</span>' : '';
+    const hint = g.type === 'single' ? '(μία επιλογή)' : '(όσα θες)';
+    return `
+      <div class="section">
+        <h3>${esc(g.name)}${req} <span style="color:var(--muted); font-weight:400; text-transform:none; letter-spacing:0;">${hint}</span></h3>
+        <div class="chips">${opts}</div>
+      </div>
+    `;
+  }).join('');
+  wrap.querySelectorAll('[data-g]').forEach(b => {
+    b.addEventListener('click', () => toggleOption(b.dataset.g, b.dataset.o, b.dataset.t));
+  });
+  $('notesSection').style.display = '';
+  $('submitRow').style.display = '';
+}
+function toggleOption(gid, oid, type) {
+  if (type === 'single') {
+    state.selections[gid] = state.selections[gid] === oid ? null : oid;
+  } else {
+    const arr = state.selections[gid] || [];
+    const i = arr.indexOf(oid);
+    if (i >= 0) arr.splice(i, 1); else arr.push(oid);
+    state.selections[gid] = arr;
+  }
+  renderGroups();
+  updateSubmit();
+}
+
+// ---------- Submit ----------
+function validateSelections() {
+  if (!state.shop) return 'Διάλεξε μαγαζί';
+  if (state.shop.freeform) {
+    if (!(state.freeText || '').trim()) return 'Γράψε την παραγγελία';
+    return null;
+  }
+  if (!state.product) return 'Διάλεξε προϊόν';
+  for (const g of state.product.groups || []) {
+    if (!g.required) continue;
+    const v = state.selections[g.id];
+    const empty = g.type === 'single' ? !v : !(Array.isArray(v) && v.length);
+    if (empty) return `Συμπλήρωσε: ${g.name}`;
+  }
+  return null;
+}
+function updateSubmit() {
+  $('submitBtn').disabled = !!validateSelections() || !state.user;
+}
+
+$('submitBtn').addEventListener('click', submitOrder);
+
+async function submitOrder() {
+  if (!state.user) { openNameModal(false); return; }
+  const err = validateSelections();
+  if (err) { toast(err); return; }
+  const payload = state.shop.freeform
+    ? {
+        name: state.user,
+        shop_id: state.shop.id,
+        free_product: (state.freeText || '').trim(),
+        quantity: state.quantity,
+        notes: $('notes').value.trim(),
+      }
+    : {
+        name: state.user,
+        shop_id: state.shop.id,
+        product_id: state.product.id,
+        selections: state.selections,
+        quantity: state.quantity,
+        notes: $('notes').value.trim(),
+      };
+  const editing = state.editingId;
+  const url = editing ? `/api/orders/${editing}` : '/api/orders';
+  const method = editing ? 'PUT' : 'POST';
+  try {
+    await api(url, {
+      method,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    toast(editing ? 'Ενημερώθηκε ✓' : 'Καταχωρήθηκε ✓');
+    cancelEdit();
+    await refresh();
+  } catch (e) {
+    toast('Σφάλμα: ' + e.message);
+  }
+}
+function resetForm() {
+  state.product = null;
+  state.selections = {};
+  state.freeText = '';
+  state.quantity = 1;
+  $('notes').value = '';
+  $('freeformText').value = '';
+  renderProducts();
+  renderFreeform();
+  renderGroups();
+  renderQuantity();
+  updateSubmit();
+}
+function startEdit(o) {
+  state.editingId = o.id;
+  state.shop = state.menu.shops.find(s => s.id === o.shop_id);
+  if (!state.shop) { toast('Το μαγαζί δεν βρέθηκε στο μενού'); state.editingId = null; return; }
+  state.product = null;
+  state.selections = {};
+  state.freeText = '';
+  if (state.shop.freeform) {
+    state.freeText = o.product || '';
+  } else {
+    state.product = state.shop.products.find(p => p.id === o.product_id);
+    if (!state.product) { toast('Το προϊόν δεν βρέθηκε στο μενού'); state.editingId = null; state.shop = null; return; }
+    (state.product.groups || []).forEach(g => {
+      state.selections[g.id] = g.type === 'single' ? null : [];
+    });
+    (o.selections || []).forEach(sel => {
+      const g = state.product.groups.find(x => x.id === sel.group_id);
+      if (!g) return;
+      if (g.type === 'single') {
+        state.selections[g.id] = (sel.option_ids || [])[0] || null;
+      } else {
+        state.selections[g.id] = [...(sel.option_ids || [])];
+      }
+    });
+  }
+  state.quantity = Math.max(1, Math.min(QTY_MAX, o.quantity || 1));
+  $('notes').value = o.notes || '';
+  $('formTitle').textContent = 'Επεξεργασία καταχώρησης';
+  $('editBadge').style.display = '';
+  $('submitBtn').textContent = 'Αποθήκευση αλλαγών';
+  $('cancelEditBtn').style.display = '';
+  renderShops();
+  renderProducts();
+  renderFreeform();
+  renderGroups();
+  renderQuantity();
+  updateSubmit();
+  $('orderCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function cancelEdit() {
+  const wasEditing = !!state.editingId;
+  state.editingId = null;
+  $('formTitle').textContent = 'Νέα καταχώρηση';
+  $('editBadge').style.display = 'none';
+  $('submitBtn').textContent = 'Καταχώρηση';
+  $('cancelEditBtn').style.display = 'none';
+  resetForm();
+  if (wasEditing) $('orderCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+$('cancelEditBtn').addEventListener('click', cancelEdit);
+
+// ---------- Πίνακας ----------
+function renderSummary(orders) {
+  const el = $('summaryList');
+  if (!orders.length) {
+    el.innerHTML = '<div class="empty">Καμία καταχώρηση ακόμα.</div>';
+    return;
+  }
+  const totalQty = orders.reduce((s, o) => s + (o.quantity || 1), 0);
+  const byShop = new Map();
+  for (const o of orders) {
+    if (!byShop.has(o.shop)) byShop.set(o.shop, new Map());
+    const shopGroups = byShop.get(o.shop);
+    const key = JSON.stringify({
+      p: o.product,
+      s: (o.selections || []).map(s => ({ g: s.group, v: s.values })),
+      n: o.notes || '',
+    });
+    if (!shopGroups.has(key)) {
+      shopGroups.set(key, {
+        product: o.product, selections: o.selections || [],
+        notes: o.notes, count: 0, people: [],
+      });
+    }
+    const entry = shopGroups.get(key);
+    const q = o.quantity || 1;
+    entry.count += q;
+    entry.people.push({ name: o.name, qty: q, orderId: o.id });
+  }
+  let html = `<div style="color:var(--muted); font-size:13px; margin-bottom:12px;">${orders.length} καταχωρήσεις · ${totalQty} τμχ</div>`;
+  for (const [shop, groups] of byShop) {
+    const shopTotal = Array.from(groups.values()).reduce((s, g) => s + g.count, 0);
+    const shopObj = state.menu.shops.find(s => s.name === shop);
+    const phone = shopObj && shopObj.phone ? shopObj.phone : '';
+    const phoneHtml = phone
+      ? `<a class="shop-phone" href="tel:${esc(phone.replace(/\s/g,''))}">📞 ${esc(phone)}</a>`
+      : '';
+    html += `<div class="summary-shop"><h4>${esc(shop)}${phoneHtml}<span class="summary-total">${shopTotal} τμχ</span></h4><ul class="summary-list">`;
+    for (const g of groups.values()) {
+      const selTags = g.selections.map(s =>
+        `<span class="tag"><span class="g">${esc(s.group)}:</span>${s.values.map(esc).join(', ')}</span>`
+      ).join(' ');
+      const notesHtml = g.notes
+        ? ` <span class="tag" style="background:#fef3c7;">📝 ${esc(g.notes)}</span>` : '';
+      const peopleHtml = g.people.map(p => {
+        const editing = state.editingId === p.orderId;
+        const qtySpan = p.qty > 1 ? `<span class="p-qty">${p.qty}×</span>` : '';
+        return `<span class="summary-person${editing ? ' editing' : ''}">
+          ${qtySpan}<span class="p-name">${esc(p.name)}</span>
+          <button class="p-edit" data-edit="${p.orderId}" title="Επεξεργασία" aria-label="Επεξεργασία">✏️</button>
+          <button class="p-del" data-del="${p.orderId}" title="Διαγραφή" aria-label="Διαγραφή">✕</button>
+        </span>`;
+      }).join('');
+      html += `<li>
+        <div class="summary-header">
+          <div class="summary-product">
+            <span class="qty">${g.count}×</span>
+            <span>${esc(g.product)}</span>
+          </div>
+        </div>
+        <div>${selTags}${notesHtml}</div>
+        <div class="summary-people">${peopleHtml}</div>
+      </li>`;
+    }
+    html += '</ul></div>';
+  }
+  el.innerHTML = html;
+  el.querySelectorAll('[data-del]').forEach(btn => {
+    btn.addEventListener('click', (e) => { e.stopPropagation(); deleteOrder(btn.dataset.del); });
+  });
+  el.querySelectorAll('[data-edit]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const order = state.orders.find(x => String(x.id) === btn.dataset.edit);
+      if (order) startEdit(order);
+    });
+  });
+}
+
+async function deleteOrder(id) {
+  if (!confirm('Διαγραφή καταχώρησης;')) return;
+  try {
+    await api('/api/orders/' + id, { method: 'DELETE' });
+    await refresh();
+  } catch (e) { toast('Σφάλμα: ' + e.message); }
+}
+
+function applyShopLock() {
+  const locked = lockedShopId();
+  if (!locked) return;
+  if (state.editingId) return;
+  if (state.shop && state.shop.id === locked) return;
+  const lockShop = state.menu.shops.find(s => s.id === locked);
+  if (!lockShop) return;
+  state.shop = lockShop;
+  state.product = null;
+  state.selections = {};
+  state.freeText = '';
+  renderProducts();
+  renderFreeform();
+  renderGroups();
+  updateSubmit();
+}
+
+async function refresh() {
+  try {
+    const data = await api('/api/state');
+    state.session = data.session;
+    state.orders = data.orders;
+    applyShopLock();
+    renderShops();
+    renderSummary(data.orders);
+    updateRandomButtons();
+  } catch (e) { console.error(e); }
+}
+
+// ---------- Τυχαία επιλογή ----------
+function uniqueParticipants() {
+  const seen = new Set();
+  const list = [];
+  for (const o of state.orders) {
+    if (!seen.has(o.name)) { seen.add(o.name); list.push(o.name); }
+  }
+  return list;
+}
+function updateRandomButtons() {
+  const hasParticipants = uniqueParticipants().length > 0;
+  $('randomCallBtn').disabled = !hasParticipants;
+  $('randomDeliverBtn').disabled = !hasParticipants;
+}
+function pickRandom(resultEl, label, emoji, variantClass) {
+  const people = uniqueParticipants();
+  if (!people.length) return;
+  if (people.length === 1) {
+    resultEl.className = 'random-result' + (variantClass ? ' ' + variantClass : '');
+    resultEl.innerHTML = `<span class="label">${label}</span>${emoji} ${esc(people[0])}`;
+    return;
+  }
+  let rolls = 0;
+  const totalRolls = 10;
+  resultEl.className = 'random-result rolling' + (variantClass ? ' ' + variantClass : '');
+  const tick = () => {
+    if (rolls < totalRolls) {
+      const cur = people[Math.floor(Math.random() * people.length)];
+      resultEl.innerHTML = `<span class="label">${label}</span>🎲 ${esc(cur)}`;
+      rolls++;
+      setTimeout(tick, 60 + rolls * 20);
+    } else {
+      const winner = people[Math.floor(Math.random() * people.length)];
+      resultEl.className = 'random-result' + (variantClass ? ' ' + variantClass : '');
+      resultEl.innerHTML = `<span class="label">${label}</span>${emoji} <strong>${esc(winner)}</strong>`;
+    }
+  };
+  tick();
+}
+$('randomCallBtn').addEventListener('click', () => {
+  pickRandom($('randomCallResult'), 'Καλεί για παραγγελία', '📞', '');
+});
+$('randomDeliverBtn').addEventListener('click', () => {
+  pickRandom($('randomDeliverResult'), 'Πάει για παραλαβή', '🏃', 'deliver');
+});
+
+// ---------- Εκτύπωση / PDF ----------
+$('printBtn').addEventListener('click', () => {
+  if (!state.orders.length) {
+    toast('Δεν υπάρχει παραγγελία προς εκτύπωση');
+    return;
+  }
+  const totalQty = state.orders.reduce((s, o) => s + (o.quantity || 1), 0);
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('el-GR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  const timeStr = now.toLocaleTimeString('el-GR', { hour: '2-digit', minute: '2-digit' });
+  $('printHeaderDate').textContent =
+    `${dateStr} · ${timeStr}   —   ${state.orders.length} καταχωρήσεις · ${totalQty} τμχ συνολικά`;
+  document.body.classList.add('printing');
+  window.print();
+  setTimeout(() => document.body.classList.remove('printing'), 500);
+});
+window.addEventListener('afterprint', () => {
+  document.body.classList.remove('printing');
+});
+
+// ---------- Ιστορικό ----------
+async function loadHistory() {
+  try {
+    const list = await api('/api/history');
+    const el = $('historyList');
+    if (!list.length) {
+      el.innerHTML = '<div class="empty">Καμία παλιά παραγγελία.</div>';
+      return;
+    }
+    el.innerHTML = list.map(s => `
+      <div class="history-item">
+        <div>
+          <strong>#${s.id}</strong> · ${fmtTime(s.closed_at || s.created_at)}
+          · ${s.order_count} καταχωρήσεις
+        </div>
+        <button class="history-link" data-h="${s.id}">Προβολή</button>
+      </div>
+    `).join('');
+    el.querySelectorAll('[data-h]').forEach(a => {
+      a.addEventListener('click', () => showHistoryDetail(a.dataset.h));
+    });
+  } catch (e) { console.error(e); }
+}
+
+async function showHistoryDetail(id) {
+  try {
+    const data = await api('/api/history/' + id);
+    const rows = data.orders.map((o, i) => {
+      const tags = (o.selections || []).map(sel =>
+        `<span class="tag"><span class="g">${esc(sel.group)}:</span>${sel.values.map(esc).join(', ')}</span>`
+      ).join(' ');
+      return `
+        <tr>
+          <td class="num">${i + 1}</td>
+          <td><strong>${esc(o.name)}</strong></td>
+          <td>${esc(o.shop)}</td>
+          <td>
+            <div><strong>${esc(o.product)}</strong></div>
+            <div>${tags}${o.notes ? ` <span class="tag" style="background:#fef3c7;">📝 ${esc(o.notes)}</span>` : ''}</div>
+          </td>
+        </tr>
+      `;
+    }).join('');
+    const body = data.orders.length ? `
+      <table>
+        <thead><tr><th>#</th><th>Όνομα</th><th>Μαγαζί</th><th>Προϊόν / Επιλογές</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    ` : '<div class="empty">Κενή παραγγελία.</div>';
+    $('historyModalTitle').textContent =
+      `Παραγγελία #${data.session.id} — έκλεισε ${fmtTime(data.session.closed_at)}`;
+    $('historyModalBody').innerHTML = body;
+    $('historyModal').classList.add('show');
+  } catch (e) { toast('Σφάλμα: ' + e.message); }
+}
+$('historyModalClose').addEventListener('click', () => $('historyModal').classList.remove('show'));
+$('historyModal').addEventListener('click', (e) => {
+  if (e.target.id === 'historyModal') $('historyModal').classList.remove('show');
+});
+
+// ---------- Bootstrap ----------
+(async function boot() {
+  try {
+    state.menu = await api('/api/menu');
+  } catch (e) {
+    document.body.innerHTML = '<div class="container"><div class="card">Σφάλμα φόρτωσης μενού: ' + esc(e.message) + '</div></div>';
+    return;
+  }
+  if (state.user && !state.menu.people.includes(state.user)) {
+    state.user = null;
+    localStorage.removeItem('fv:name');
+  }
+  if (state.user) {
+    $('userName').textContent = state.user;
+    $('userPill').style.display = '';
+  } else {
+    openNameModal(false);
+  }
+  renderShops();
+  await refresh();
+  await loadHistory();
+  setInterval(refresh, 4000);
+})();
+</script>
+</body>
+</html>
